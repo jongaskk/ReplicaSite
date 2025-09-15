@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use uma fonte similar se preferir */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f9ff; /* Cor de fundo geral, se necessário */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Sessão 1: Página Inicial */
+.hero-section {
+    background-color: #d9e9ff; /* Azul claro */
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    min-height: 600px; /* Ajuste conforme necessário */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Para garantir que as imagens/ilustrações não saiam do container */
+}
+
+.hero-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.hero-section .logo img {
+    height: 40px; /* Ajuste o tamanho do logo */
+}
+
+.hero-section nav {
+    display: flex;
+    gap: 20px;
+}
+
+.hero-section nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section nav .cta-cadastre-se {
+    background-color: #007bff; /* Um azul mais escuro para o CTA */
+    color: white;
+}
+
+.hero-section nav .cta-pergunta {
+    background-color: #007bff; /* Um azul mais escuro para o CTA */
+    color: white;
+    border: 2px solid #007bff;
+}
+
+.hero-section nav a:hover {
+    background-color: #e9ecef;
+}
+
+.hero-section nav .cta-cadastre-se:hover,
+.hero-section nav .cta-pergunta:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.hero-content {
+    max-width: 700px;
+    z-index: 2; /* Para garantir que fique acima da ilustração */
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #1c3f7c; /* Azul escuro para o título */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+}
+
+.search-bar button {
+    background-color: #007bff; /* Azul para o botão de busca */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.hero-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 50%; /* Ajuste a largura conforme necessário */
+    max-width: 500px; /* Limita o tamanho máximo */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+.categories {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    border-radius: 25px;
+    z-index: 3;
+}
+
+.category-btn {
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    color: #007bff;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.category-btn:hover {
+    background-color: #e9ecef;
+}
+
+.category-btn span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Sessão 2: Cadastro / Login */
+.auth-section {
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.auth-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.auth-container h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #1c3f7c;
+}
+
+.auth-container p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.btn-google {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.btn-google img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-google:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #00c4ff; /* Um azul mais claro para o segundo botão */
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #00a0cc;
+}
+
+.or-separator {
+    margin: 30px 0;
+    position: relative;
+    text-align: center;
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.or-separator::before,
+.or-separator::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #eee;
+    transform: translateY(-50%);
+}
+
+.or-separator::before {
+    left: 0;
+}
+
+.or-separator::after {
+    right: 0;
+}
+
+.email-signup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.email-signup input {
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+}
+
+.email-signup input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.privacy-note {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.login-prompt {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.login-prompt a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+.terms-note {
+    font-size: 0.8em;
+    color: #999;
+}
+
+/* Responsividade (Básico) */
+@media (max-width: 768px) {
+    .hero-section .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-section nav {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-image {
+        display: none; /* Oculta a ilustração em telas menores ou ajusta seu tamanho */
+    }
+
+    .categories {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    .auth-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .email-signup {
+        flex-direction: column;
+    }
+}
